@@ -48,3 +48,17 @@ This repository is based on the implementation of a simple TCP server implementa
 
     in case you need to delete cache use this in Linux or Mac:
     `find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf`
+
+## Deployment
+
+    To build docker
+
+    `docker build . -t route:environment`
+
+    To push docker
+
+    `docker push route:environment`
+
+    To test docker locally
+
+    `docker run -it -p 80:5000 route:environment`
