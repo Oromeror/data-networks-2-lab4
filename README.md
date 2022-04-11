@@ -6,30 +6,31 @@ This repository is based on the implementation of a simple TCP server implementa
 
 - Create a [virtual environment](https://docs.python.org/es/3/tutorial/venv.html) with the command
 
-    ### windows
+    #### windows
     `py -3 -m venv .venv`
-    ### MacOS/Linux
+    #### MacOS/Linux
     `python -m venv .venv` or `python3 -m venv .venv`
 
 - Activate the virtual environment:
 
-    ### Windows:
+    #### Windows:
     `.venv\scripts\activate` or `.venv\scripts\activate.bat`
-    ### In Linux or Mac:
+    #### In Linux or Mac:
     `source .venv/bin/activate`
 
     It should appear (venv) in the console. Whenever a new console is executed, the virtual machine has a libraries and dependencies other than those found in the normal Windows environment, this to maintain the integrity of the applications in the operating system.
 
-    linux or mac `pip install --upgrade pip` or `python3 -m pip install --upgrade pip`
-    windows `python -m pip install --upgrade pip` 
+    Linux/Mac `pip install --upgrade pip` or `python3 -m pip install --upgrade pip`
+    Windows `python -m pip install --upgrade pip` 
 
 - Install dependencies
 
-    #### Windows (may require elevation)
+    #### Windows 
+    may require elevation
     `python3 -m pip install -r requirements.txt` or `py -3 -m pip install -r requirements.txt`
-    ### macOS/Linux
+    #### MacOS/Linux
     `python -m pip install -r requirements.txt` or `python3 -m pip install -r requirements.txt`
-    ### Linux (Debian)
+    #### Linux (Debian)
     `apt-get install python3-tk`
     `python3 -m pip install m-r requirements.txt`
 
@@ -45,4 +46,5 @@ This repository is based on the implementation of a simple TCP server implementa
 
     to run main.py use uvicorn `main:app --reload --host 0.0.0.0 --port 80`
 
-    in case you need to delete cache use this in linux or mac `find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf`
+    in case you need to delete cache use this in Linux or Mac:
+    `find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf`
